@@ -1,0 +1,16 @@
+name: Rust
+
+on: [push, workflow_dispatch]
+
+env:
+  CARGO_TERM_COLOR: always
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    container:
+      image: ghcr.io/spmadden/irox-dev:latest
+    steps:
+    - uses: actions/checkout@v4
+    - name: CI Build
+      run: just ci
