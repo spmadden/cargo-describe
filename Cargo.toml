@@ -16,7 +16,7 @@ repository = "https://github.com/spmadden/cargo-describe"
 clap = {version = "^4.5", features = ["derive", "wrap_help", "string", "cargo", "env"]}
 log = {version = "^0.4", features = []}
 git2 = {version = "0.18.3", features = ["vendored-openssl", "vendored-libgit2"]}
-cargo = {version = "0.79.0", features = ["all-static", "vendored-openssl", "vendored-libgit2"]}
+cargo = {version = "0.80.0", features = ["all-static", "vendored-openssl", "vendored-libgit2"]}
 irox-log = {version = "0.2.0"}
 irox-enums = {version = "0.2.2"}
 irox-csv = {version = "0.5.1"}
