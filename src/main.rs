@@ -2,7 +2,7 @@
 // Copyright 2023 IROX Contributors
 
 //!
-//!
+//! CLI tool to produce human-friendly information from cargo-metadata
 //!
 
 #![forbid(unsafe_code)]
