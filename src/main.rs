@@ -12,7 +12,6 @@
 use cargo::core::{Package, Workspace};
 use clap::Parser;
 use irox_csv::CSVError;
-use irox_enums::EnumName;
 use log::error;
 use std::collections::BTreeMap;
 
@@ -160,7 +159,7 @@ pub fn print_human_text(context: &Context) {
 }
 
 pub fn print_csv(fields: &[Fields], context: &Context) -> Result<(), CSVError> {
-    let headers: Vec<&str> = fields.iter().map(EnumName::name).collect();
+    let headers: Vec<&str> = fields.iter().map(Fields::name).collect();
     let mut writer = irox_csv::CSVWriter::new(std::io::stdout()).with_column_names(&headers);
     writer.write_header()?;
     for krate in &context.crates {
