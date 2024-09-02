@@ -87,8 +87,8 @@ pub fn main() {
                 .summary()
                 .features()
                 .keys()
+                .filter(|v| v.as_str() != "default" && !v.is_empty())
                 .map(|v| v.as_str().to_string())
-                .filter(|v| v != "default")
                 .collect::<Vec<String>>();
             let feature_sep = features.join(" ");
             // let relmod = relmanifest.strip_suffix("Cargo.toml").map(String::from).unwrap_or_default();
